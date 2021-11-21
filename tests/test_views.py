@@ -9,7 +9,12 @@ def test_api_parse_succeeds(client):
     # data comes back in the appropriate format.
     address_string = '123 main st chicago il'
     response = AddressParse.parse(client, address_string)
-    expected_response = [OrderedDict([('AddressNumber', '123'), ('StreetName', 'main'), ('StreetNamePostType', 'st'), ('PlaceName', 'chicago'), ('StateName', 'il')]), 'Street Address']
+    expected_response = [OrderedDict([('AddressNumber', '123'),
+                                     ('StreetName', 'main'),
+                                     ('StreetNamePostType', 'st'),
+                                     ('PlaceName', 'chicago'),
+                                     ('StateName', 'il')]),
+                         'Street Address']
     assert response == expected_response
 
 

@@ -24,9 +24,11 @@ $(document).ready(function() {
 });
 
 function displayResponse(response) {
+    // remove error alert if present
     try {
         document.getElementsByClassName("alert alert-danger")[0].style.display = "none";
     }
+    // add parsed address data to table
     finally {
         let results_table = document.getElementById("address-results");
         results_table.style.display = "inline";
@@ -51,6 +53,7 @@ function displayResponse(response) {
     // console.log(response);
 }
 
+// display error alert message
 function displayError(error) {
     let card = document.getElementsByClassName("col-12")[0];
     let errorMessage = document.createElement("div");
