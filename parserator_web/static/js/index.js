@@ -27,7 +27,7 @@ $(document).ready(function () {
 function displayResponse (response) {
   // remove error alert if present
   try {
-    document.getElementsByClassName("alert alert-danger")[0].style.display = "none"
+    document.querySelector(".alert-danger").style.display = "none"
   }
   // add parsed address data to table
   finally {
